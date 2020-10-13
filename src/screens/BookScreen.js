@@ -7,14 +7,19 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { books } from '../utils/Data';
-
+import ADD_TO_CART from '../redux/CartItem';
 function Separator() {
   return (
     <View style={{ borderBottomWidth: 1, borderBottomColor: '#a9a9a9' }} />
   );
 }
 function BookScreen() {
+  const dispatch = useDispatch();
+  const addItemToCart = (item) =>
+    dispatch({ type: ADD_TO_CART, payload: item });
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -31,7 +36,7 @@ function BookScreen() {
               <Text style={styles.textAuthor}>by {item.author}</Text>
               <View style={styles.buttonContainer}>
                 <TouchableOpacity
-                  onPress={() => alert('Add to cart')}
+                  onPress={() => addItemToCart(item)}
                   style={styles.button}
                 >
                   <Text style={styles.buttonText}>Add +</Text>
