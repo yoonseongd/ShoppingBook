@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { books } from '../utils/Data';
-import ADD_TO_CART from '../redux/CartItem';
+import { ADD_TO_CART } from '../redux/CartItem';
 function Separator() {
   return (
     <View style={{ borderBottomWidth: 1, borderBottomColor: '#a9a9a9' }} />

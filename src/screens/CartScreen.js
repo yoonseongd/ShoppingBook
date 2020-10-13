@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { REMOVE_FROM_CART } from '../redux/CartItems';
+import { REMOVE_FROM_CART } from '../redux/CartItem';
 
 function Separator() {
   return (
