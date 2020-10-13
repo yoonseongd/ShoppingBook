@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 
 function ShoppingCartIcon(props) {
@@ -10,7 +10,7 @@ function ShoppingCartIcon(props) {
       onPress={() => navigation.navigate('Cart')}
       style={{ marginRight: 10 }}
     >
-      <Ionicons name="ios-cart" size={32} color="#101010" />
+      <Icon name="facebook" size={32} color="#101010" />
     </TouchableOpacity>
   );
 }
